@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 소식 2026-11-11</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"><style>
+:root{
+  --blue-500:oklch(0.620 0.191 258);--blue-50:oklch(0.959 0.020 250);
+  --grey-900:oklch(0.237 0.020 258);--grey-700:oklch(0.460 0.028 256);--grey-600:oklch(0.562 0.025 254);
+  --grey-500:oklch(0.666 0.021 253);--grey-400:oklch(0.779 0.016 251);--grey-200:oklch(0.930 0.005 248);
+  --grey-100:oklch(0.966 0.003 248);
+  --bg:var(--grey-100);--surface:oklch(1 0 0);--line:var(--grey-200);
+  --fg:var(--grey-900);--fg-2:var(--grey-700);--fg-3:var(--grey-500);
+  --accent:var(--blue-500);--accent-weak:var(--blue-50);
+  --shadow-2:0 4px 12px oklch(0.155 0.060 261 / 0.06),0 1px 2px oklch(0.155 0.060 261 / 0.04);
+  --ease:cubic-bezier(0.22,0.61,0.36,1);
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:oklch(0.174 0.006 286);--surface:oklch(0.247 0.013 285);--line:oklch(0.361 0.019 285);
+  --fg:oklch(1 0 0);--fg-2:oklch(0.818 0.004 286);--fg-3:oklch(0.701 0.009 286);
+  --accent:oklch(0.700 0.160 258);--accent-weak:oklch(0.300 0.062 267);
+  --shadow-2:0 4px 12px oklch(0 0 0 / 0.30);
+}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+  font-size:15px;line-height:1.5;letter-spacing:-0.005em;-webkit-font-smoothing:antialiased}
+main{max-width:1080px;margin:0 auto;padding:40px 24px 80px}
+a{color:inherit;text-decoration:none}
+.back{display:inline-flex;align-items:center;gap:4px;min-height:44px;color:var(--fg-2);font-weight:600}
+.back:hover{color:var(--fg)}
+.eyebrow{margin:0 0 8px;color:var(--fg-3);font-size:13px;font-weight:600}
+h1{margin:0;font-size:28px;line-height:1.3;font-weight:700;letter-spacing:-0.02em}
+.lead{margin:8px 0 0;color:var(--fg-2);font-size:17px}
+.section-title{margin:48px 0 16px;font-size:20px;font-weight:700;letter-spacing:-0.015em;display:flex;align-items:center;gap:8px}
+.count{font-size:13px;font-weight:600;color:var(--accent);background:var(--accent-weak);border-radius:999px;padding:3px 10px}
+.num{font-variant-numeric:tabular-nums}
+
+.hero{margin-top:32px;background:var(--surface);border-radius:24px;padding:28px}
+.hero h2{margin:0 0 16px;font-size:17px;font-weight:600}
+.hero ol{margin:0;padding:0;list-style:none;display:grid;gap:14px;counter-reset:n}
+.hero li{display:grid;grid-template-columns:28px 1fr;gap:12px;font-size:17px;line-height:1.55;color:var(--fg)}
+.hero li::before{counter-increment:n;content:counter(n);display:grid;place-items:center;width:28px;height:28px;border-radius:999px;
+  background:var(--accent-weak);color:var(--accent);font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;margin-top:1px}
+
+.grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media (min-width:641px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1024px){.grid{grid-template-columns:repeat(3,1fr)}}
+
+.card{display:flex;flex-direction:column;background:var(--surface);border-radius:20px;padding:24px;
+  transition:box-shadow 200ms var(--ease),transform 200ms var(--ease)}
+.card:hover{box-shadow:var(--shadow-2);transform:translateY(-2px)}
+.card .idx{font-size:13px;font-weight:600;color:var(--fg-3);font-variant-numeric:tabular-nums}
+.card h3{margin:8px 0 10px;font-size:18px;line-height:1.45;font-weight:600;letter-spacing:-0.01em}
+.card p{margin:0;color:var(--fg-2)}
+.card .foot{margin-top:auto;padding-top:20px;display:flex;align-items:center;justify-content:space-between}
+.card .src{font-size:12px;font-weight:500;color:var(--fg-3)}
+.link{display:inline-flex;align-items:center;gap:2px;min-height:44px;padding:0 4px;margin-right:-4px;
+  color:var(--accent);font-weight:600;border-radius:10px;transition:background 120ms var(--ease)}
+.link:hover{background:var(--accent-weak)}
+.link:focus-visible,.date-card:focus-visible,.back:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.date-card{display:flex;flex-direction:column;gap:6px;background:var(--surface);border-radius:20px;padding:24px;min-height:132px;
+  transition:box-shadow 200ms var(--ease),transform 200ms var(--ease)}
+.date-card:hover{box-shadow:var(--shadow-2);transform:translateY(-2px)}
+.date-card:active,.card:active{transform:none}
+.date-card .d{font-size:22px;font-weight:700;letter-spacing:-0.015em;font-variant-numeric:tabular-nums}
+.date-card .w{color:var(--fg-3);font-size:13px;font-weight:600}
+.date-card .m{margin-top:auto;display:flex;justify-content:space-between;align-items:center;color:var(--fg-2);font-weight:600}
+.date-card .m span:last-child{color:var(--fg-3)}
+
+.empty{margin-top:32px;background:var(--surface);border-radius:24px;padding:48px 24px;text-align:center}
+.empty strong{display:block;font-size:18px;font-weight:600}
+.empty p{margin:6px 0 0;color:var(--fg-2)}
+@media (max-width:640px){main{padding:24px 16px 64px}.hero{padding:24px 20px}.card,.date-card{padding:20px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head>
+<body><main>
+<a class="back" href="index.html"><span aria-hidden="true">‹</span> 목록으로</a>
+<header style="margin-top:16px">
+  <p class="eyebrow num">2026-11-11 · 수요일</p>
+  <h1>오늘의 AI 소식</h1>
+  <p class="lead">AI 에이전트, 업무 자동화, 클로드 관련 글을 골라 짧게 정리했어요.</p>
+</header>
+<section class="hero" aria-label="세 줄 요약"><h2>세 줄로 보면</h2><ol><li>오늘은 AI 에이전트가 직접 데스크톱 앱이나 영상 시스템을 조작하는 사례들이 눈에 띄었어요.</li><li>에이전트에 설치하는 글쓰기 스킬처럼 결과물의 품질을 다듬는 도구도 소개됐어요.</li><li>한편 AI 회의록 요약의 오류와 Anthropic 취약점 발견 도구의 성과 간극처럼, AI 활용의 한계를 짚는 이야기도 있었어요.</li></ol></section>
+<h2 class="section-title">기사 <span class="count num">5건</span></h2>
+<div class="grid">
+<article class="card">
+  <span class="idx">01</span>
+  <h3>Vercel agent-desktop - AI 에이전트가 데스크톱 앱을 조작하는 CLI</h3>
+  <p>Vercel이 AI 에이전트가 맥·윈도우·리눅스 데스크톱 앱을 직접 조작할 수 있게 해주는 CLI 도구 agent-desktop을 내놓았어요. 화면 좌표 대신 접근성 API로 가져온 버튼·입력란 ID를 써서 클릭과 입력을 하고, CLI·MCP 서버·C 라이브러리로 연동할 수 있어요.</p>
+  <div class="foot"><span class="src">GeekNews</span><a class="link" href="https://news.hada.io/topic?id=36967" target="_blank" rel="noopener">원문 보기<span aria-hidden="true">›</span></a></div>
+</article>
+<article class="card">
+  <span class="idx">02</span>
+  <h3>Show GN: NOX - LLM 채팅으로 영상을 찾고 제어하는 NVR/VMS 플랫폼</h3>
+  <p>NOX는 LLM 채팅으로 영상을 찾아 재생하고 화면을 전환할 수 있는 1인 개발 NVR·VMS 플랫폼이에요. Claude 같은 외부 API나 자체 추론 서버를 골라 쓸 수 있고, 값을 바꾸는 작업은 채팅이 초안만 만들고 사용자가 승인해야 실행돼요.</p>
+  <div class="foot"><span class="src">GeekNews</span><a class="link" href="https://news.hada.io/topic?id=36979" target="_blank" rel="noopener">원문 보기<span aria-hidden="true">›</span></a></div>
+</article>
+<article class="card">
+  <span class="idx">03</span>
+  <h3>Show GN: 에이전트가 글을 제대로 쓰도록 만들기, Human-readable writing</h3>
+  <p>human-readable-writing은 에이전트가 압축된 명사구 대신 주체와 동작이 드러나는 문장으로 글을 쓰게 만드는 설치형 글쓰기 스킬이에요. 조건과 예외는 해당 주장 가까이에 배치하고 원문의 사실·수치는 유지하면서, 불분명한 관계는 추측해서 채우지 않도록 지시해요.</p>
+  <div class="foot"><span class="src">GeekNews</span><a class="link" href="https://news.hada.io/topic?id=36988" target="_blank" rel="noopener">원문 보기<span aria-hidden="true">›</span></a></div>
+</article>
+<article class="card">
+  <span class="idx">04</span>
+  <h3>Ask GN: 비개발자인데, AI 회의록 요약에서 제가 제안한 게 합의한 걸로 정리됩니다</h3>
+  <p>영업 담당자가 AI로 회의록을 요약받을 때 자신이 제안한 말이 실제 합의처럼 정리되는 문제를 겪고 있다고 해요. 상대 발언과 본인 제안을 나눠서 제안은 미합의로 표시해 달라고 요청하면 조금 나아지지만, 말이 길게 섞인 회의에서는 여전히 헷갈린다고 해요.</p>
+  <div class="foot"><span class="src">GeekNews</span><a class="link" href="https://news.hada.io/topic?id=36986" target="_blank" rel="noopener">원문 보기<span aria-hidden="true">›</span></a></div>
+</article>
+<article class="card">
+  <span class="idx">05</span>
+  <h3>7개월이 지난 Glasswing, 기대에 못 미치는 발견으로 유지보수자에게 과도한 부담을 주다</h3>
+  <p>Anthropic의 AI 취약점 발견 도구 Glasswing은 37,966건을 찾았지만 공개된 건 7,349건, 수정 완료로 표시된 건 217건에 그쳤어요. 9월 이후 발견 건수는 크게 늘었는데 수정 완료는 15건 늘어나는 데 그쳐, 처음 내세운 성과와 실제 결과 사이에 간극이 있다는 지적이 나와요.</p>
+  <div class="foot"><span class="src">GeekNews</span><a class="link" href="https://news.hada.io/topic?id=36971" target="_blank" rel="noopener">원문 보기<span aria-hidden="true">›</span></a></div>
+</article>
+</div>
+</main></body></html>
